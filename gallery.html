@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Моё Портфолио</h2>
+        <div class="text-center mb-4">
+            <div class="btn-group" role="group" aria-label="Фильтр портфолио">
+                <button class="btn btn-outline-primary" onclick="filterGallery('all')">Все</button>
+                <button class="btn btn-outline-primary" onclick="filterGallery('web')">Веб-дизайн</button>
+                <button class="btn btn-outline-primary" onclick="filterGallery('photo')">Фотография</button>
+                <button class="btn btn-outline-primary" onclick="filterGallery('graphic')">Графика</button>
+            </div>
+        </div>
+
+        <div class="row g-4" id="gallery">
+            <div class="col-12 col-sm-6 col-md-4 gallery-item" data-category="web">
+                <div class="card h-100">
+                    <img src="https://placeholder.apptor.studio/400/300/website.png" class="card-img-top" alt="Веб-проект">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Корпоративный сайт</h6>
+                        <small class="text-muted">Веб-дизайн</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 gallery-item" data-category="photo">
+                <div class="card h-100">
+                    <img src="https://placeholder.apptor.studio/400/300/website.png" class="card-img-top" alt="Фото пустыни">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Фото пустыни</h6>
+                        <small class="text-muted">Фотография</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 gallery-item" data-category="photo">
+                <div class="card h-100">
+                    <img src="https://placeholder.apptor.studio/400/300/website.png" class="card-img-top" alt="Фото леса">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Фото леса</h6>
+                        <small class="text-muted">Фотография</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 gallery-item" data-category="graphic">
+                <div class="card h-100">
+                    <img src="https://placeholder.apptor.studio/400/300/website.png" class="card-img-top" alt="Рисунок утки">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Рисунок утки</h6>
+                        <small class="text-muted">Графика</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 gallery-item" data-category="photo">
+                <div class="card h-100">
+                    <img src="https://placeholder.apptor.studio/400/300/website.png" class="card-img-top" alt="Вид">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Вид</h6>
+                        <small class="text-muted">Фотография</small>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-md-4 gallery-item" data-category="graphic">
+                <div class="card h-100">
+                    <img src="https://placeholder.apptor.studio/400/300/website.png" class="card-img-top" alt="Рисунок кота">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Рисунок кота</h6>
+                        <small class="text-muted">Графика</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.btn-group .btn');
+            items.forEach(item => {
+                const itemCat = item.dataset.category;
+                if (category === 'all' || category === itemCat) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons.forEach(btn => {
+                const onclickAttr = btn.getAttribute('onclick');
+                if (onclickAttr) {
+                    if (category === 'all' && onclickAttr.includes("'all'")) btn.classList.add('active');
+                    if (category === 'web' && onclickAttr.includes("'web'")) btn.classList.add('active');
+                    if (category === 'photo' && onclickAttr.includes("'photo'")) btn.classList.add('active');
+                    if (category === 'graphic' && onclickAttr.includes("'graphic'")) btn.classList.add('active');
+                }
+            });
+        }
+        window.onload = function() {
+            document.querySelector(".btn-group .btn").classList.add("active");
+        };
+    </script>
+</body>
+</html>
