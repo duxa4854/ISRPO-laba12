@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Lab - Leontev</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Наш кастомный CSS -->
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+
+    <!-- 1. НАВИГАЦИЯ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-code-slash me-2"></i>MyPortfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">О себе</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Портфолио</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO-СЕКЦИЯ -->
+    <section class="container-fluid bg-light py-5" id="home">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Привет, я <span class="text-primary">Артем и Андрей</span></h1>
+            <p class="lead text-muted my-4">Full-stack разработчик | Создаю современные веб-решения для вашего бизнеса
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#portfolio" class="btn btn-primary btn-lg">Мои работы</a>
+                <a href="#contact" class="btn btn-outline-secondary btn-lg">Связаться</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. СЕКЦИЯ "О СЕБЕ" -->
+    <section class="container my-5 py-5" id="about">
+        <h2 class="text-center mb-5">Обо мне</h2>
+        <div class="row align-items-center g-4">
+            <div class="col-lg-4 text-center">
+                <img src="img/3х4.jpg" alt="Фото профиля" class="about-avatar mb-3">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://github.com/duxa4854" class="btn btn-outline-primary btn-sm rounded-circle"><i
+                            class="bi bi-github"></i></a>
+                    <a href="https://vk.ru/duxa_vill" class="btn btn-outline-primary btn-sm rounded-circle"><i
+                            class="bi bi-youtube"></i></a>
+                    <a href="https://github.com/artem4134" class="btn btn-outline-primary btn-sm rounded-circle"><i
+                            class="bi bi-github"></i></a>
+                    <a href="https://vk.ru/zzz_mal" class="btn btn-outline-primary btn-sm rounded-circle"><i
+                            class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h4>Разработчик с passion к качественному коду</h4>
+                <p class="text-muted">
+                    Более 3 лет создаю веб-приложения и сайты. Специализируюсь на стеке JavaScript (React, Node.js)
+                    и PHP (Laravel). Люблю решать сложные задачи и превращать идеи в работающие продукты.
+                </p>
+                <p>
+                    <strong>Мой подход:</strong> чистый код, адаптивный дизайн, внимание к деталям и срокам.
+                    Всегда открыт к новым проектам и интересным предложениям!
+                </p>
+                <a href="#contact" class="btn btn-primary mt-2">Написать мне</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. СЕКЦИЯ "УСЛУГИ" -->
+    <section class="container my-5 py-5" id="services">
+        <h2 class="text-center mb-5">Мои услуги</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <i class="bi bi-laptop-code display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Веб-разработка</h5>
+                        <p class="card-text text-muted">
+                            Создаем современные адаптивные веб-сайты с использованием
+                            последних технологий и лучших практик.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <i class="bi bi-phone display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Мобильные приложения</h5>
+                        <p class="card-text text-muted">
+                            Разрабатываем нативные и кроссплатформенные мобильные приложения
+                            для iOS и Android.
+                        </p>
+                        <a href="#" class="btn btn-outline-success btn-sm">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <i class="bi bi-palette display-4 text-warning mb-3"></i>
+                        <h5 class="card-title">UI/UX Дизайн</h5>
+                        <p class="card-text text-muted">
+                            Проектируем интуитивные пользовательские интерфейсы с фокусом на
+                            удобство и эстетику.
+                        </p>
+                        <a href="#" class="btn btn-outline-warning btn-sm">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. СЕКЦИЯ "ПОРТФОЛИО" -->
+    <section class="container my-5 py-5" id="portfolio">
+        <h2 class="text-center mb-5">Мои проекты</h2>
+        <div class="row g-4">
+            <!-- Проект 1 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="portfolio-item">
+                    <img src="" alt="Интернет-магазин">
+                    <div class="portfolio-overlay">
+                        <h5>Интернет-магазин</h5>
+                        <p class="small mb-0">React + Node.js</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Проект 2 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="portfolio-item">
+                    <img src="" alt="Корпоративный сайт">
+                    <div class="portfolio-overlay">
+                        <h5>Корпоративный сайт</h5>
+                        <p class="small mb-0">Bootstrap 5 + PHP</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Проект 3 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="portfolio-item">
+                    <img src="" alt="Мобильное приложение">
+                    <div class="portfolio-overlay">
+                        <h5>Мобильное приложение</h5>
+                        <p class="small mb-0">React Native</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Проект 4 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="portfolio-item">
+                    <img src="" alt="Лендинг">
+                    <div class="portfolio-overlay">
+                        <h5>Лендинг пейдж</h5>
+                        <p class="small mb-0">HTML/SCSS + JS</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Проект 5 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="portfolio-item">
+                    <img src="" alt="CRM-система">
+                    <div class="portfolio-overlay">
+                        <h5>CRM-система</h5>
+                        <p class="small mb-0">Laravel + Vue</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Проект 6 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="portfolio-item">
+                    <img src="" alt="Блог">
+                    <div class="portfolio-overlay">
+                        <h5>Блог-платформа</h5>
+                        <p class="small mb-0">Next.js + MongoDB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. КОНТАКТНАЯ ФОРМА -->
+    <section class="container my-5 py-5" id="contact">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2 class="text-center mb-4">Свяжитесь со мной</h2>
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required />
+                        <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+                        <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Ваше сообщение"
+                            required></textarea>
+                        <div class="invalid-feedback">Пожалуйста, введите сообщение</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agree" required />
+                        <label class="form-check-label" for="agree">
+                            Я согласен с политикой конфиденциальности
+                        </label>
+                        <div class="invalid-feedback">Вы должны согласиться с условиями</div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Отправить сообщение</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ФУТЕР -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>О компании</h5>
+                    <p class="text-muted small">
+                        Создаю современные веб-решения для вашего бизнеса с
+                        использованием передовых технологий.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Быстрые ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О себе</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Я в соцсетях</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/duxa4854" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                        <a href="https://vk.ru/zzz_mal" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
+
+                    </div>
+                    <p class="mt-3 small text-muted">
+                        <i class="g"></i> info@myportfolio.com<br>
+                        <i class="g"></i> +7 (999) 123-45-67
+                    </p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255, 255, 255, 0.1)" />
+            <div class="text-center">
+                <p class="mb-0 small">&copy; 2026 MyPortfolio. Все права защищены.</p>
+                <p class="mb-0 text-muted small">Создано с ❤️ и Bootstrap 5</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Скрипт валидации формы -->
+    <script>
+        (function () {
+            "use strict";
+            const form = document.getElementById("contactForm");
+
+            // Валидация Bootstrap
+            form.addEventListener("submit", function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    alert("✅ Форма успешно отправлена! Спасибо за сообщение.");
+                    form.reset();
+                    form.classList.remove("was-validated");
+                }
+                form.classList.add("was-validated");
+            }, false);
+
+            // Анимация появления секций при скролле
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+                // Показываем первую секцию сразу
+                if (section.id === 'home') {
+                    section.classList.add('visible');
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
